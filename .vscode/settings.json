@@ -1,0 +1,24 @@
+{
+    // WoW runs Lua 5.1.
+    "Lua.runtime.version": "Lua 5.1",
+
+    // WoW API definitions, from the "ketho.wow-api" extension. The version is
+    // part of the path, so bump it after the extension updates.
+    "Lua.workspace.library": [
+        "~\.vscode\extensions\ketho.wow-api-0.22.3\Annotations"
+    ],
+
+    // Globals this addon reads that the annotations above do not declare.
+    // These come from the EllesmereUI parent addon, not from Blizzard.
+    // Keep this list matched to what the code actually uses.
+    "Lua.diagnostics.globals": [
+        "EllesmereUI",
+        "EllesmereUIDB",
+        "EUI_CLIENT_BLOCKED"
+    ],
+
+    // Blizzard still ships plenty of APIs the annotations mark as deprecated.
+    "Lua.diagnostics.disable": [
+        "deprecated"
+    ]
+}

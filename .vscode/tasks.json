@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy EllesmereUIChatNotify",
+            "type": "process",
+            "command": "${workspaceFolder}\\build\\deploy.cmd",
+            "args": [
+                "${workspaceFolder}\\source",
+                "D:\\Games\\World of Warcraft\\_retail_\\Interface\\AddOns\\EllesmereUIChatNotify"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
